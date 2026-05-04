@@ -1,0 +1,77 @@
+/* =========================================
+   1. RESET Y BASE
+   ========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Open Sans', sans-serif; line-height: 1.8; color: #444; overflow-x: hidden; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* =========================================
+   2. CABECERA (Nav Pill)
+   ========================================= */
+.main-header {
+    background: linear-gradient(to right, #ff8a7a, #ffb366, #ff8a9a);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+.logo-container { display: flex; align-items: center; }
+.site-logo { height: 45px; margin-right: 12px; }
+.brand-name { font-family: 'Montserrat', sans-serif; color: white; font-size: 1.3rem; font-weight: 600; }
+.nav-pill { background-color: rgba(255, 255, 255, 0.95); padding: 6px 20px; border-radius: 30px; }
+.nav-pill ul { display: flex; list-style: none; gap: 20px; }
+.nav-pill ul li a { text-decoration: none; color: #444; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.75rem; transition: 0.3s; }
+.nav-pill ul li a.active, .nav-pill ul li a:hover { color: #ff8a7a; }
+
+/* =========================================
+   3. ELEMENTOS COMUNES
+   ========================================= */
+.section-padding { padding: 80px 0; }
+.bg-light { background-color: #fdfaf8; }
+.flex-row { display: flex; align-items: center; gap: 50px; }
+.column-image, .column-text { flex: 1; }
+.main-photo { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.section-tag { color: #ffb366; text-transform: uppercase; font-weight: 700; font-size: 0.8rem; margin-bottom: 5px; display: block; }
+h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: #333; margin-bottom: 20px; }
+.lead-text { font-size: 1.25rem; color: #333; margin-bottom: 20px; }
+
+/* Cajas de diseño especial */
+.highlight-box { background: #fff; padding: 25px; border-left: 5px solid #ffb366; border-radius: 10px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.note-box { background: #fff3e0; padding: 20px; border-radius: 10px; font-size: 0.95rem; color: #e65100; border: 1px dashed #ffb366; }
+
+/* =========================================
+   4. CONTACT GRID & CARDS
+   ========================================= */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.contact-card { background: white; padding: 40px 30px; border-radius: 20px; text-align: center; transition: 0.3s; border: 1px solid #eee; }
+.contact-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+.contact-card i { font-size: 2.5rem; color: #ff8a7a; margin-bottom: 20px; }
+.highlight-card { background: linear-gradient(135deg, #ff8a7a, #ffb366); color: white; border: none; }
+.highlight-card i, .highlight-card h3 { color: white; }
+
+.btn-small { display: inline-block; margin-top: 20px; padding: 10px 25px; background: #ff8a7a; color: white; text-decoration: none; border-radius: 25px; font-weight: 600; font-size: 0.8rem; transition: 0.3s; }
+.btn-small:hover { background: #ffb366; }
+
+/* =========================================
+   5. BANNERS Y FOOTER
+   ========================================= */
+.page-hero { padding: 100px 0; text-align: center; color: white; background-size: cover; background-position: center; }
+.page-hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; }
+
+footer { background: #333; color: white; padding: 60px 0 20px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; border-bottom: 1px solid #444; padding-bottom: 40px; }
+.footer-info h3 { color: #ffb366; margin-bottom: 15px; }
+.footer-links ul { list-style: none; }
+.footer-links ul li a { color: #ccc; text-decoration: none; font-size: 0.9rem; }
+.footer-copy { text-align: center; padding-top: 20px; font-size: 0.8rem; color: #888; }
+
+/* =========================================
+   6. RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+    .flex-row { flex-direction: column; text-align: center; }
+    .header-content { flex-direction: column; gap: 15px; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+}
