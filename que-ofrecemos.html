@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevos Lazos | Qué Ofrecemos</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Tipografías y FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- CABECERA UNIFICADA -->
     <header class="main-header">
         <div class="container header-content">
             <div class="logo-container">
@@ -30,103 +28,123 @@
         </div>
     </header>
 
-    <!-- BANNER DE BIENVENIDA -->
-    <section class="page-hero" style="background: linear-gradient(rgba(255, 138, 122, 0.8), rgba(255, 179, 102, 0.8)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1920');">
+    <section class="page-hero-alt" style="background: linear-gradient(rgba(255, 138, 122, 0.8), rgba(255, 179, 102, 0.8)), url('eslogan.png'); background-size: cover; background-position: center;">
         <div class="container">
-            <h1>Servicios que ofrecemos</h1>
-            <p>Recursos educativos para el desarrollo emocional y social</p>
+            <h1>SERVICIOS QUE OFRECEMOS</h1>
         </div>
     </section>
 
     <main>
-        <!-- INTRODUCCIÓN -->
         <section class="section-padding">
-            <div class="container">
-                <div class="about-intro">
-                    <span class="section-tag">Metodología</span>
-                    <h2>Nuestra Propuesta Educativa</h2>
-                    <p class="lead-text">Nuestro proyecto ofrece diferentes actividades y recursos educativos orientados al desarrollo emocional y social de los infantes del CRAE. Todas nuestras propuestas están adaptadas a su edad y necesidades, fomentando el aprendizaje a través de experiencias dinámicas y participativas.</p>
+            <div class="container flex-row">
+                <div class="column-image">
+                    <img src="foto7.png" alt="Propuesta educativa" class="main-photo">
+                </div>
+                <div class="column-text">
+                    <span class="section-tag">Nuestra Metodología</span>
+                    <h2>Nuestra propuesta educativa</h2>
+                    <p>Nuestra propuesta educativa se basa en un enfoque integral donde el juego y la vivencia son el motor del aprendizaje. Diseñamos cada sesión pensando en el desarrollo de competencias emocionales que sirvan para la vida real.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN ESTÉTICA: FASES DE LAS ACTIVIDADES -->
         <section class="section-padding bg-light">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 50px;">
-                    <span class="section-tag">El proceso</span>
-                    <h2>Fases de nuestras actividades</h2>
-                </div>
+                <h3 class="sub-title-list">Entre los servicios y actividades que ofrecemos, destacan:</h3>
+                <p style="text-align: center; margin-bottom: 30px; color: #888;">(Haz clic en cada tarjeta para ver la actividad)</p>
                 
-                <div class="phases-container">
-                    <div class="phase-item">
-                        <div class="phase-number">1</div>
-                        <h3>Acogida y Apertura</h3>
-                        <p>Creamos un entorno seguro donde tratamos la conexión inicial y el clima de confianza necesario para el grupo.</p>
+                <div class="services-grid">
+                    
+                    <div class="flip-card" onclick="this.classList.toggle('active')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-heart"></i>
+                                <p><b>Talleres de educación emocional</b>, donde trabajamos la identificación y expresión de emociones.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="fotosactividades/foto1.png" alt="Actividad 1">
+                            </div>
+                        </div>
                     </div>
-                    <div class="phase-item">
-                        <div class="phase-number">2</div>
-                        <h3>Exploración Dinámica</h3>
-                        <p>Fase central donde tratamos el contenido específico mediante el juego, la acción y la participación activa.</p>
+
+                    <div class="flip-card" onclick="this.classList.toggle('active')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-users"></i>
+                                <p><b>Dinámicas grupales y juegos cooperativos</b> para fomentar el trabajo en equipo y la confianza.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="fotosactividades/foto2.png" alt="Actividad 2">
+                            </div>
+                        </div>
                     </div>
-                    <div class="phase-item">
-                        <div class="phase-number">3</div>
-                        <h3>Reflexión y Cierre</h3>
-                        <p>Tratamos la integración de lo aprendido, compartiendo sentimientos y cerrando el espacio de forma positiva.</p>
+
+                    <div class="flip-card" onclick="this.classList.toggle('active')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-smile"></i>
+                                <p><b>Actividades de autoestima y autoconocimiento</b>, reforzando la seguridad personal.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="fotosactividades/foto3.png" alt="Actividad 3">
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="flip-card" onclick="this.classList.toggle('active')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-comments"></i>
+                                <p><b>Espacios de diálogo y reflexión</b> en un entorno seguro para compartir experiencias.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="fotosactividades/foto4.png" alt="Actividad 4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card" onclick="this.classList.toggle('active')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-handshake"></i>
+                                <p><b>Actividades sobre relaciones sanas y responsabilidad afectiva</b>, promoviendo el respeto.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="fotosactividades/foto5.png" alt="Actividad 5">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card" onclick="this.classList.toggle('active')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-child"></i>
+                                <p><b>Acompañamiento educativo y social</b> durante todo el proceso de aprendizaje.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="fotosactividades/foto6.png" alt="Actividad 6">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- LISTADO DE SERVICIOS (Cards) -->
         <section class="section-padding">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 50px;">
-                    <h2>Servicios Destacados</h2>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <i class="fas fa-smile-beam"></i>
-                        <h4>Talleres de Educación Emocional</h4>
-                        <p>Trabajamos la identificación y expresión de emociones para un mejor autogobierno.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-users"></i>
-                        <h4>Dinámicas Grupales</h4>
-                        <p>Juegos cooperativos para fomentar el trabajo en equipo, la empatía y la confianza mutua.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-star"></i>
-                        <h4>Autoestima y Autoconocimiento</h4>
-                        <p>Actividades para reforzar la seguridad personal y la valoración positiva de uno mismo.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-comments"></i>
-                        <h4>Espacios de Diálogo</h4>
-                        <p>Entornos seguros para compartir experiencias, inquietudes y sentimientos sin juicio.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <h4>Responsabilidad Afectiva</h4>
-                        <p>Promoción del respeto, la comunicación y el establecimiento de límites saludables.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-user-graduate"></i>
-                        <h4>Acompañamiento Social</h4>
-                        <p>Apoyo cercano durante todo el proceso de aprendizaje y crecimiento emocional.</p>
-                    </div>
+                <div class="final-quote">
+                    <p><em>"Nuestro objetivo es que cada actividad se convierta en una oportunidad para aprender, compartir y crecer de manera saludable."</em></p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <div class="container footer-grid">
             <div class="footer-info">
                 <h3>Nuevos Lazos</h3>
-                <p>Facilitando la gestión emocional y el bienestar social en entornos residenciales.</p>
+                <p>Facilitando la gestión emocional y el bienestar social.</p>
             </div>
             <div class="footer-links">
                 <h4>Empresa</h4>
@@ -138,9 +156,9 @@
             </div>
             <div class="footer-contact">
                 <h4>Contacto</h4>
-                <p>📍 Calle Ejemplo 123, CP 08000</p>
-                <p>📞 +34 900 000 000</p>
-                <p>✉️ info@nuevoslazos.es</p>
+                <p>📍 Terrassa, Barcelona</p>
+                <p>📞 +34 987881523</p>
+                <p>✉️ nuevoslazoss@gmail.com</p>
             </div>
         </div>
         <div class="footer-copy">

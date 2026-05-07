@@ -1,12 +1,28 @@
 /* =========================================
-   1. RESET Y BASE
+   1. CONFIGURACIÓN GENERAL Y RESET
    ========================================= */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Open Sans', sans-serif; line-height: 1.8; color: #444; overflow-x: hidden; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    color: #444;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 /* =========================================
-   2. CABECERA (Nav Pill)
+   2. CABECERA (Header & Nav Pill)
    ========================================= */
 .main-header {
     background: linear-gradient(to right, #ff8a7a, #ffb366, #ff8a9a);
@@ -16,62 +32,389 @@ body { font-family: 'Open Sans', sans-serif; line-height: 1.8; color: #444; over
     z-index: 1000;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
-.header-content { display: flex; justify-content: space-between; align-items: center; }
-.logo-container { display: flex; align-items: center; }
-.site-logo { height: 45px; margin-right: 12px; }
-.brand-name { font-family: 'Montserrat', sans-serif; color: white; font-size: 1.3rem; font-weight: 600; }
-.nav-pill { background-color: rgba(255, 255, 255, 0.95); padding: 6px 20px; border-radius: 30px; }
-.nav-pill ul { display: flex; list-style: none; gap: 20px; }
-.nav-pill ul li a { text-decoration: none; color: #444; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.75rem; transition: 0.3s; }
-.nav-pill ul li a.active, .nav-pill ul li a:hover { color: #ff8a7a; }
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 45px;
+    margin-right: 12px;
+}
+
+.brand-name {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.nav-pill {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 6px 20px;
+    border-radius: 30px;
+}
+
+.nav-pill ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-pill ul li { margin: 0 12px; }
+
+.nav-pill ul li a {
+    text-decoration: none;
+    color: #444;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    transition: 0.3s;
+}
+
+.nav-pill ul li a:hover, 
+.nav-pill ul li a.active {
+    color: #ff8a7a;
+}
 
 /* =========================================
-   3. ELEMENTOS COMUNES
+   3. BANNERS (Hero)
+   ========================================= */
+.hero-slogan {
+    background-image: url('eslogan.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+
+.slogan-overlay {
+    background: linear-gradient(to right, 
+        rgba(255, 138, 122, 0.75), 
+        rgba(255, 179, 102, 0.75), 
+        rgba(255, 138, 154, 0.75));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slogan h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.page-hero-alt {
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.page-hero-alt h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   4. SECCIONES Y LAYOUT (Zig-Zag)
    ========================================= */
 .section-padding { padding: 80px 0; }
 .bg-light { background-color: #fdfaf8; }
-.flex-row { display: flex; align-items: center; gap: 50px; }
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.row-reverse { flex-direction: row-reverse; }
 .column-image, .column-text { flex: 1; }
-.main-photo { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-.section-tag { color: #ffb366; text-transform: uppercase; font-weight: 700; font-size: 0.8rem; margin-bottom: 5px; display: block; }
-h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: #333; margin-bottom: 20px; }
-.lead-text { font-size: 1.25rem; color: #333; margin-bottom: 20px; }
 
-/* Cajas de diseño especial */
-.highlight-box { background: #fff; padding: 25px; border-left: 5px solid #ffb366; border-radius: 10px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.note-box { background: #fff3e0; padding: 20px; border-radius: 10px; font-size: 0.95rem; color: #e65100; border: 1px dashed #ffb366; }
+.main-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.section-tag {
+    color: #ffb366;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.text-center-box {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
 /* =========================================
-   4. CONTACT GRID & CARDS
+   5. TARJETAS FLIP (Giran al hacer clic)
    ========================================= */
-.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-.contact-card { background: white; padding: 40px 30px; border-radius: 20px; text-align: center; transition: 0.3s; border: 1px solid #eee; }
-.contact-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-.contact-card i { font-size: 2.5rem; color: #ff8a7a; margin-bottom: 20px; }
-.highlight-card { background: linear-gradient(135deg, #ff8a7a, #ffb366); color: white; border: none; }
-.highlight-card i, .highlight-card h3 { color: white; }
+.services-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
 
-.btn-small { display: inline-block; margin-top: 20px; padding: 10px 25px; background: #ff8a7a; color: white; text-decoration: none; border-radius: 25px; font-weight: 600; font-size: 0.8rem; transition: 0.3s; }
-.btn-small:hover { background: #ffb366; }
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.active .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.flip-card-front {
+    background: white;
+    border-top: 5px solid #ffb366;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #ff8a7a, #ffb366);
+    color: white;
+    transform: rotateY(180deg);
+    overflow: hidden;
+}
+
+.flip-card-back img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.member-role-back {
+    padding: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.member-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fdfaf8;
+    margin-bottom: 15px;
+}
 
 /* =========================================
-   5. BANNERS Y FOOTER
+   6. PILARES (Emoji Negro + Agrandar)
    ========================================= */
-.page-hero { padding: 100px 0; text-align: center; color: white; background-size: cover; background-position: center; }
-.page-hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; }
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
 
-footer { background: #333; color: white; padding: 60px 0 20px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; border-bottom: 1px solid #444; padding-bottom: 40px; }
-.footer-info h3 { color: #ffb366; margin-bottom: 15px; }
+.pillar-card {
+    background: linear-gradient(135deg, #fff5f2 0%, #fffbf5 100%);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #ffefe0;
+    border-bottom: 4px solid #ffb366;
+    transition: transform 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: scale(1.05);
+}
+
+.pillar-emoji-black {
+    font-size: 2.5rem;
+    color: #000 !important;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   7. ESTILOS ESPECÍFICOS DE CONTACTA
+   ========================================= */
+
+/* Contactos Creativos */
+.contact-grid-creative {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffb366;
+}
+
+.contact-card i {
+    display: block;
+    font-size: 2.2rem;
+    color: #ff8a7a;
+    margin-bottom: 15px;
+}
+
+.contact-card span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* Botones */
+.btn-main {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(to right, #ff8a7a, #ffb366);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(255, 138, 122, 0.3);
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 138, 122, 0.4);
+}
+
+.btn-alt {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #ff8a7a;
+    color: #ff8a7a;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-alt:hover {
+    background: #ff8a7a;
+    color: white;
+}
+
+/* Visual Voluntario */
+.voluntario-card-visual {
+    background: white;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    color: #ffb366;
+}
+
+.voluntario-card-visual i {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   8. FOOTER
+   ========================================= */
+footer {
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-info h3 { color: #ffb366; margin-bottom: 15px; font-family: 'Montserrat'; }
+.footer-links h4, .footer-contact h4 { margin-bottom: 20px; color: #fff; text-transform: uppercase; }
 .footer-links ul { list-style: none; }
-.footer-links ul li a { color: #ccc; text-decoration: none; font-size: 0.9rem; }
-.footer-copy { text-align: center; padding-top: 20px; font-size: 0.8rem; color: #888; }
+.footer-links ul li { margin-bottom: 10px; }
+.footer-links ul li a { color: #adb5bd; text-decoration: none; transition: 0.3s; }
+.footer-links ul li a:hover { color: white; }
+
+.footer-copy {
+    text-align: center;
+    border-top: 1px solid #495057;
+    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
 
 /* =========================================
-   6. RESPONSIVE
+   9. RESPONSIVE
    ========================================= */
 @media (max-width: 992px) {
-    .flex-row { flex-direction: column; text-align: center; }
-    .header-content { flex-direction: column; gap: 15px; }
+    .flex-row, .row-reverse { flex-direction: column; text-align: center; }
     .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-slogan h1 { font-size: 1.8rem; }
+    .page-hero-alt h1 { font-size: 2rem; }
 }
